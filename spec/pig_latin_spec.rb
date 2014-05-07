@@ -6,5 +6,6 @@ describe 'pig_latin' do
     expect(PigLatin.check_conditions('glove')).to eq('oveglay')
     expect(PigLatin.check_conditions('yellow')).to eq('ellowyay')
     expect(PigLatin.check_conditions('rhythm')).to eq('ythmrhay')
+    expect(PigLatin.check_conditions('shrimp')).to eq('impshray')
   end
 end

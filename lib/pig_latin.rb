@@ -18,7 +18,7 @@ module PigLatin
   end
 
   def self.check_consonant(word)
-    pl_word = /\A[aeiouy]/.match(word.slice(1..-1)) ?  word.slice(1..-1) + word.slice(0) + "ay" : word.slice(2..-1) + word.slice(0..1) + "ay"
+    pl_word = /\A[aeiouy]/.match(word.slice(1..-1)) ?  word.slice(1..-1) + word.slice(0) + "ay" : /\A[aeiouy]/.match(word.slice(2..-1)) ? word.slice(2..-1) + word.slice(0..1) + "ay" : word.slice(3..-1) + word.slice(0..2) + "ay"
     return pl_word
   end
 
